@@ -1,0 +1,10 @@
+package com.pedritto.business.rules;
+
+dialect  "mvel"
+
+rule "Test rule"
+    when
+        (eval(true))
+    then
+        System.out.println("TEST RULE")
+end
