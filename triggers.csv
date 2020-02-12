@@ -1,0 +1,2 @@
+cronTriggerFile1, 0/15 * * * * ?
+cronTriggerFile2, 0/28 * * * * ?
