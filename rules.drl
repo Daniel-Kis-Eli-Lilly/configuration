@@ -1,10 +1,14 @@
-package com.pedritto.business.rules;
+package com.lilly.lrl.eventcoordinator.rules;
+global com.lilly.lrl.eventcoordinator.rules.model.DataProductBuildModel dataProductBuildModel;
+
+import com.lilly.lrl.eventcoordinator.rules.model.RuleInputModel;
 
 dialect  "mvel"
 
-rule "Test rule"
+rule "Data Product build"
     when
-        (eval(true))
+        ruleInputModel : RuleInputModel(id == "test")
     then
-        System.out.println("TEST RULE")
+        dataProductBuildModel.setDagId("TEST-PRODUCT")
+        dataProductBuildModel.addParameter("param1", "value1")
 end
